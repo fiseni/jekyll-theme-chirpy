@@ -27,6 +27,21 @@ $prompt-newer: "{{ site.data.label.post.button.next }}";
   border-color: var(--btn-border-color);
 }
 
+#post-wrapper {
+  h1 {
+    text-align: center;
+  }
+
+  .post-cover-img {
+    width: 100%;
+    position: relative;
+    padding: 0;
+    margin-top: 1rem;
+    max-height: 500px;
+    @include align-center;
+  }
+}
+
 .post-content {
   > ol, > ul, > dl {
     padding-left: 2rem;
@@ -41,11 +56,6 @@ $prompt-newer: "{{ site.data.label.post.button.next }}";
     > p {
       margin: 1rem 0 0.8rem;
     }
-  }
-  .post-preview-img {
-    margin-top: 0;
-    margin-bottom: 2.5rem;
-    @include align-center;
   }
 }
 

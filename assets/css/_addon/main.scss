@@ -479,7 +479,6 @@ footer {
   > div.d-flex {
     line-height: 1.2rem;
     width: 95%;
-    max-width: 1045px;
     border-top: 1px solid var(--main-border-color);
     margin-bottom: 1rem;
     > div {
@@ -1002,23 +1001,6 @@ div.post-content .table-wrapper {
   #main-wrapper {
     padding-bottom: $footer-height;
   }
-
-  footer {
-    height: $footer-height;
-    > div.d-flex {
-      width: 100%;
-      padding: 1.5rem 0;
-      margin-bottom: 0.3rem;
-      flex-wrap: wrap;
-      justify-content: left!important;
-      -ms-flex-pack: distribute!important;
-      justify-content: space-around!important;
-    }
-    .footer-left, .footer-right {
-      text-align: center;
-    }
-  }
-
 }
 
 
@@ -1147,9 +1129,21 @@ div.post-content .table-wrapper {
 }
 
 
-@media all and (min-width: 577px) and (max-width: 1199px) {
-  footer>.d-flex > div {
-    width: 312px;
+@media all and (max-width: 1199px) {
+  footer {
+    height: $footer-height;
+    > div.d-flex {
+      width: 100%;
+      padding: 1.5rem 0;
+      margin-bottom: 0.3rem;
+      flex-wrap: wrap;
+      justify-content: left!important;
+      -ms-flex-pack: distribute!important;
+      justify-content: space-around!important;
+    }
+    .footer-left, .footer-right {
+      text-align: center;
+    }
   }
 }
 
@@ -1187,10 +1181,6 @@ div.post-content .table-wrapper {
 
   #topbar-title {
     text-align: left;
-  }
-
-  footer > div.d-flex {
-    width: 92%;
   }
 
 }
@@ -1260,6 +1250,10 @@ div.post-content .table-wrapper {
     display: none;
   }
 
+  .post-thumbnail {
+    display: none;
+  }
+
   #topbar {
     padding: 0;
   }
@@ -1286,7 +1280,6 @@ div.post-content .table-wrapper {
 
   #topbar {
     padding: 0;
-    max-width: 1070px;
   }
 
   #panel-wrapper {
@@ -1325,16 +1318,12 @@ div.post-content .table-wrapper {
     font-size: 1.03rem;
   }
 
-  footer > div.d-felx {
-    width: 85%;
-  }
-
 }
 
 @media all and (min-width: 1400px) {
 
   #main > div.row {
-    padding-left: calc((100% - #{$main-content-max-width}) / 2);
+    padding-left: 10px;
     > div.col-xl-8 {
       max-width: 850px;
     }
@@ -1383,10 +1372,6 @@ div.post-content .table-wrapper {
 
   #topbar-wrapper {
     left: $sidebar-width-large;
-  }
-
-  #topbar {
-    max-width: #{$main-content-max-width};
   }
 
   #search-wrapper {
@@ -1499,10 +1484,6 @@ div.post-content .table-wrapper {
       }
     } // .sidebar-bottom
   } // #sidebar
-  footer > div.d-flex {
-    width: 87%;
-    max-width: 1140px;
-  }
 
   #search-result-wrapper {
     width: calc(100% - #{$sidebar-width-large});
@@ -1518,14 +1499,6 @@ div.post-content .table-wrapper {
   #topbar-wrapper {
     padding-right: calc(100% - #{$sidebar-width-large}
      - (1920px - #{$sidebar-width-large}) ) /* 100% - 350px - (1920px - 350px); */
-  }
-
-  #topbar {
-    max-width: calc(#{$main-content-max-width} + 20px)
-  }
-
-  #main > div.row {
-    padding-left: calc((100% - #{$main-content-max-width} - 2%) / 2);
   }
 
   #panel-wrapper {
@@ -1544,10 +1517,6 @@ div.post-content .table-wrapper {
 }
 
 @media (min-width: 1920px) {
-  #main > div.row {
-    padding-left: 190px;
-  }
-
   #search-result-wrapper {
     padding-right: calc(100% - #{$sidebar-width-large} - 1530px);
   }

@@ -29,8 +29,8 @@
   /* Sidebar */
   --sidebar-bg: radial-gradient(
     circle,
-    rgba(42, 30, 107, 1) 0%,
-    rgba(35, 37, 46, 1) 100%);
+    rgba(2, 67, 146, 1) 0%,
+    rgba(1, 48, 103, 1) 100%);
   --nav-cursor-color: #fcfcfc;
 
   /* Topbar */
@@ -42,6 +42,7 @@
   --input-focus-border-color: var(--btn-border-color);
 
   /* Home page */
+  --post-preview-bg: rgba(243, 241, 241, 0.87);
   --post-list-text-color: dimgray;
   --btn-patinator-text-color: #555555;
   --btn-paginator-hover-color: #e9ecef;
